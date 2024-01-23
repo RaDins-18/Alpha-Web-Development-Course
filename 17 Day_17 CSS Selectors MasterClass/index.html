@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+</head>
+<style>
+    /* Element Selector */
+    div{
+        background-color: red;
+    }
+
+    /* Class Selector */
+    .lime{
+        background-color: lime;
+    }
+
+    /* Id Selector */
+    #violet{
+        background-color: violet;
+    }
+
+    /* Child Selector */
+    span > p{
+        color: aqua;
+        background-color: rgb(171, 56, 248);
+    }
+    
+    /* Descendant Selector */
+    span p{
+        color: aqua;
+        background-color: rgb(171, 56, 248);
+    }
+
+    /* Universal Selector */
+    *{
+        margin: 3px;
+    }
+
+    /* Pseudo Selector */
+    a:link{
+        color: brown;
+    }
+    a:visited{
+        color: rgb(42, 165, 63);
+    }
+    a:active{
+        background-color: yellow;
+    }
+    a:hover{
+        background-color: black;
+    }
+    b:first-child{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <div>I am a div</div>
+    <div>I am a div</div>
+    <p class="lime">I am a para</p>
+    <p id="violet">I am a para</p>
+    <span>
+        I am a span
+        <p>I am also a para</p>
+    </span>
+    <span>
+        I am a span
+        <h1>
+            I am also a span
+            <p>I am also a para</p>
+        </h1>
+    </span>
+
+    <a href="https://www.google1.com" target="_blank">Go to Google</a>
+    <a href="https://www.facebook.com" target="_blank">Go to Facebook</a>
+
+    <main class="one">
+        <b>I am first</b>
+        <b>I am second</b>
+    </main>
+</body>
+</html>

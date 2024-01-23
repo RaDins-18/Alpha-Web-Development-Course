@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid blue;
+            display: inline;
+
+            /* In inline property width is not included */
+            width: 455px;
+
+            /* In inline property padding-top is not included */
+            padding: 15px;
+
+            /* In inline property margin-top is not included */
+            margin: 15px;
+
+            /* But if I change the display property inline-block. So, padding-top, margin-top and width is included. */
+            display: inline-block;
+        }
+        .box1{
+            /* In display: none; box and it's space is removed */
+            /* display: none; */
+
+            /* In visibility: hidden; box is removed but it's space is remained */
+            /* visibility: hidden; */
+
+            /* There are also two more important display properties: */
+            /* display: flex; */
+            /* display: grid; */
+        }
+    </style>
+</head>
+<body>
+    <!-- Important related web link -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/display -->
+    <div class="box box1">
+        I am a block element.
+        But I am also become a inline element.
+    </div>
+    <div class="box">I am a box</div>
+    <span>I am a good</span>
+    <span>Boy</span>
+</body>
+</html>

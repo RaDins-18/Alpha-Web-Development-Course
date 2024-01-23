@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Baloo Bhai 2 Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>CSS Fonts, Text & Color Properties</title>
+</head>
+
+<style>
+    /* Baloo Bhai 2 Font */
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap');
+    /* Poppins */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+    h1 {
+        /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+        font-family: 'Poppins', sans-serif;
+        text-decoration: overline;
+    }
+
+    p {
+        /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+        /* font-style: oblique; */
+        /* font-weight: 500; */
+        font-size: larger;
+        text-decoration: underline;
+        font-family: 'Baloo Bhai 2', sans-serif;
+        line-height: 4;
+        letter-spacing: 3px;
+    }
+
+    h2{
+        text-transform: capitalize;
+        /* text-transform: uppercase; */
+        /* text-transform: lowercase; */
+        text-decoration: underline;
+        text-decoration-color: red;
+        text-decoration-style: dotted;
+        text-decoration-thickness: 10px;
+        text-indent: 15px;
+        text-align: center;
+    }
+    .lorem{
+        width: 100px;
+        border: 2px solid gray;
+        overflow: hidden;
+        /* By Default value is clip */
+        /* text-overflow: clip; */
+        text-overflow: ellipsis;
+        /* word-break: break-all; */
+    }
+</style>
+
+<body>
+    <div>
+        <!-- https://codepen.io/web-dot-dev/pen/yLojraG -->
+        <h1>Fonts</h1>
+        <h2>about Fonts</h2>
+        <p>This is the video of fonts</p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore similique earum reprehenderit, corrupti debitis animi porro dolores esse laudantium a aliquid in. Officiis corporis tempora in impedit tempore illum, nesciunt ab non!</p>
+
+    </div>
+</body>
+
+</html>
