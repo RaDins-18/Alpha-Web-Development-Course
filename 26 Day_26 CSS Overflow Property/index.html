@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Property</title>
+</head>
+<style>
+    .box{
+        width: 30vw;
+        height: 10vh;
+        border: 2px solid black;
+
+        /* overflow is used when we don't want to overflow our container's content*/
+        overflow: scroll;
+
+        /* overflow: hidden; hides the over flow content */
+        overflow: hidden;
+
+        /* overflow: auto; is automatically detect content of container if overflow so, scroll bar is occurs */
+        overflow: auto;
+
+        /* white-space: nowrap; is used when we want our content only in horizontal line */
+        /* white-space: nowrap; */
+
+        /* text-overflow: ellipsis; is used when we want dots on the end of overflow line */
+        text-overflow: ellipsis;
+
+        /* We can set x and y axis seperately */
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+        /* We can also set x and y axis combinly */
+        overflow: hidden auto;
+
+    }
+</style>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium neque architecto repellendus iste nobis numquam asperiores eveniet ad optio alias dolorem totam non hic praesentium in animi fugit, unde, libero laborum voluptas eius inventore commodi. Itaque rem alias fugit cum amet ullam vitae a dolore!
+    </div>
+    
+</body>
+</html>
