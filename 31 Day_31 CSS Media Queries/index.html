@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries </title>
+    <style>
+        body{
+            background-color: red;
+        }
+        .boxes{
+            display: flex;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: steelblue;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        /* Media Queries are used to serve website with different styles in different devices. */
+        /* Syntax: @media not|only mediatype and (expressions){ CSS-Code; } */
+        @media screen and (orientation: landscape){
+            body{
+                border: 2px solid black;
+            }
+        }
+        @media screen and (orientation: portrait){
+            body{
+                border: 2px solid darkorange;
+            }
+        }
+        @media only screen and (max-width: 655px){
+            body{
+                background-color: aqua;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        @media only screen and (min-width:655px) and (max-width: 800px){
+            body{
+                background-color: lime;
+            }
+            .boxes{
+                flex-wrap: wrap;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        I have a red Body
+    </div>
+    <div class="boxes">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</body>
+</html>
