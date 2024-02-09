@@ -1,0 +1,44 @@
+/* In :root we define global variables. */
+:root{
+    --color: rgb(255, 0, 255);
+    --seccolor: rgb(252, 137, 252);
+    --pri_border: 2px solid black;
+    --def_op: 0.8;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div:first-child{
+    background-color: rgb(33, 202, 33);
+    /* Through var() we use global variable. */
+    background-color: var(--color);
+}
+
+div > nav > ul{
+    display: flex;
+}
+
+div > nav > ul > li{
+    list-style: none;
+    padding: 25px;
+    margin: 10px;
+    background-color: var(--seccolor);
+    border: var(--pri_border);
+    opacity: var(--def_op);
+}
+
+div > nav > ul > :first-child{
+    /* We can also define local variables. */
+    --seccolor: rgb(121, 235, 255);
+    background-color: var(--seccolor);
+}
+
+.container{
+    background-color: rgb(133, 228, 133);
+    /* We can also define an alternative color like below. */
+    background-color: var(--seccolor, blue);
+}
