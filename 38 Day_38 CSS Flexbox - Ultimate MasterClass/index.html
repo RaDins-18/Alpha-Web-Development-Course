@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* FLEX CONTAINER PROPERTIES */
+
+        .container{
+            border: 2px solid red;
+            margin: 5px;
+            display: flex;
+            height: 90vh;
+
+            /* justify-content property is used to adjest lines of items in main-axis in differnt ways. */
+            justify-content: center;
+            /* There is no use of justify-items in flexbox. */
+
+            /* align-content property is used to adjest lines of items in cross-axis in differnt ways. */
+            align-content: center;
+            /* align-items property is used to adjest items in cross-axis in differnt ways. */
+            /* align-items: center; */
+
+            /* flex-direction property is used to adjest direction of items row, column and other differnt options. */
+            flex-direction: row;
+                     
+            /* flex-wrap property is used when items in container are many in numbers and overflow, so flex-wrap property wraps items and don't allow items to overflow. */
+            flex-wrap: wrap;
+
+            /* flex-flow property has 2 attributes 1st is flex direction and 2nd is flew-wrap. */
+            flex-flow: row wrap;
+
+            /* gap property is used as margin in flex-box. */
+            gap: 30px;
+            column-gap: 30px; /* We can also set gap seperately. */
+            row-gap: 30px;
+        }
+
+        /* FLEX ITEMS PROPERTIES */
+
+        .box{
+            background-color: blueviolet;
+            border: 2px solid black;
+            height: 52px;
+            width: 52px;
+        }
+        
+        .order-2{
+            /* Through order property we can set order of a item or items, Items in container shows accourding to ascending order, The default order is 0. */
+            /* order: 2; */
+
+            /* flex-grow property is used for using extra empty space, Default value of flex-grow is 0. flex-grow property is 1, so these items takes 1x more extra empty space. */
+            /* flex-grow: 1; */
+        }
+        .box-1{
+            /* align-self property is used to adjest individual item cross-axis in differnt ways, But it will only be use when align-content is not used in container. */
+            /* align-self: flex-end; */
+
+            /* The flex-grow property is 3, so this item takes 3x more extra empty space. */
+            /* flex-grow: 3; */
+
+            /* flex-wrap property is the ability of items to shrink when display becomes small. */
+            /* flex-shrink: 5; */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="box box-1 order-2">1</div>
+            <div class="box order-2">2</div>
+            <div class="box order-2">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+            <div class="box">10</div>
+            <div class="box">11</div>
+            <div class="box">12</div>
+            <div class="box">13</div>
+            <div class="box">14</div>
+            <div class="box">15</div>
+            <div class="box">16</div>
+            <div class="box">17</div>
+            <div class="box">18</div>
+            <div class="box">19</div>
+            <div class="box">20</div>
+        </div>
+    </main>
+    
+</body>
+</html>
