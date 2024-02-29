@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            border: 2px solid black;
+            margin: 5px;
+            display: grid;
+
+            /* grid-template-areas property is also used to set templates. */
+            grid-template-areas: "nav     nav      nav"
+                                 "side    artical  artical"
+                                 "side    main     main"
+                                 "footer  footer   footer";
+        }
+        .item{
+            border: 2px solid rgb(0, 0, 0);
+            margin: 10px;
+            text-align: center;
+        }
+        .item-1{
+            background-color: rgb(255, 33, 70);
+            height: 50px;
+            /* Through grid-area property we can set items accourding to template. */
+            grid-area: nav;
+            
+        }
+        .item-2{
+            background-color: rgb(0, 255, 255);
+            height: 220px;
+            grid-area: side;
+
+        }
+        .item-3{
+            background-color: rgb(0, 255, 76);
+            height: 100px;
+            grid-area: artical;
+        }
+        .item-4{
+            background-color: rgb(229, 255, 0);
+            height: 100px;
+            grid-area: main;
+        }
+        .item-5{
+            background-color: rgb(255, 0, 212);
+            height: 50px;
+            /* grid-area: nav;      We can also collapse items. */
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">Header-1</div>
+        <div class="item item-2">Side-2</div>
+        <div class="item item-3">Artical-3</div>
+        <div class="item item-4">Main-4</div>
+        <div class="item item-5">Footer-5</div>
+    </div>
+</body>
+</html>

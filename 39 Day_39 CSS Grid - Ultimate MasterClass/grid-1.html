@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            border: 2px solid black;
+            margin: 5px;
+
+            /* Through display: grid template becomes grid or blocks like structure. */
+            display: grid;
+
+            /* Through grid-template-columns property we can set number of columns ( vertically ) with its size. */
+            grid-template-columns: [pehla] 120px [dusra] 120px [tisra];
+
+            /* Through grid-template-rows property we can set number of rows ( horizontally ) with its size. */
+            grid-template-rows: 120px 120px;
+        }
+        .item{
+            border: 2px solid red;
+            margin: 10px;
+        }
+        .item-1{
+            /* Through grid-row property we can set where to start and where to end of an item or items in rows. */
+            grid-row-start: 1;
+            grid-row-end: 2;
+            /* OR */
+            grid-row: 1/2;
+
+            /* Through grid-column property we can set where to start and where to end of an item or items in column. */
+            grid-column: 1/2;
+            /* OR */
+            grid-column: pehla/dusra;
+        }
+        .item-4{
+            grid-row: 1;
+            grid-column: 1;
+        }
+    </style>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            border: 2px solid black;
+            height: 80vh;
+            margin: 5px;
+
+            display: grid;
+
+            /* fr values divide page into parts, 1fr means 1 part of page, I used 1fr three times so page divides into 3 equal parts. */
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+
+            grid-template-rows: 1fr 1fr;
+
+
+            /* gap property is used insted of margin between the items. */
+            row-gap: 10px;
+            column-gap: 10px;
+            gap: 10px;
+
+            /* justify-items, align-items, and some more properties are also used in grid. */
+            justify-items: center;
+            align-items: center;
+        }
+        
+        .item{
+            border: 2px solid red;
+            background-color: pink;
+            height: 80px;
+            width: 80px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
