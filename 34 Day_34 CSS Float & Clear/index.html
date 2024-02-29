@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+            margin: 5px;
+        }
+        img{
+            /* float property is used to float an element to right and left side. */
+            /* float: left; */
+            float: right;
+        }
+        .card{
+            border: 2px solid red;
+            margin: 5px;
+            padding: 5px;
+        }
+        .card:nth-child(3){
+            background-color: aqua;
+            /* clear property is used to remove float property on elements. */
+            /* clear: left;
+            clear: right; */
+            clear: both;
+
+            /* float and clear property is not recommended to use, flexbox is better way to set layout. */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="data:image/jpeg;base64,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" alt="" width="200px">
+        <div class="card">
+            Card 1
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt vel eligendi eos libero quibusdam, incidunt perferendis veniam ab blanditiis quas, recusandae mollitia voluptatum ea necessitatibus sit ratione totam quis voluptas reprehenderit aliquam atque quia facilis ut tempora. Nesciunt, earum? Quidem quisquam fugit, asperiores incidunt eveniet dolor, beatae accusantium nemo blanditiis, dolorum obcaecati iste totam labore?
+            </p>
+        </div>
+        <div class="card">
+            Card 2
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, odio. Sunt porro id incidunt temporibus deserunt ea quidem dolorum maxime sit iste doloremque iure, debitis commodi fugit est in ad rem distinctio quasi minus sed libero quisquam nobis. Reprehenderit possimus, harum, quae nulla aliquid eius impedit dolores est quidem minima perspiciatis nesciunt earum magni rerum?
+            </p>
+        </div>
+        <div class="card">
+            Card 3
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta exercitationem eum neque, voluptas, necessitatibus iste perferendis minus, cupiditate libero reprehenderit sit corporis doloremque dolores cumque odio tenetur! Quod ex quas ratione a odit in harum doloribus, perspiciatis quo consectetur mollitia fuga quia? Pariatur aliquid laboriosam ratione vero deleniti quibusdam, nisi libero eligendi eveniet iure veniam?
+            </p>
+        </div>
+    </div>
+</body>
+</html>
