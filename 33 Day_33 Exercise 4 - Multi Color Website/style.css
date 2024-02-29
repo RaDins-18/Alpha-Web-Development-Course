@@ -6,38 +6,47 @@
 
 @media only screen and (min-width: 1240px) and (max-width: 1400px){
     :root{
-        --background-color: rgb(0, 0, 0);
+        --primary-background-color: rgb(0, 0, 0);
+        --secondary-background-color: rgba(0, 0, 0, 0.3);
         --text-color: rgb(255, 255, 255);
     }
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 1560px){
     :root{
-        --background-color: rgb(177, 25, 25);
+        --primary-background-color: rgb(177, 25, 25);
+        --secondary-background-color: rgb(177, 25, 25, 0.3);
         --text-color: rgb(0, 0, 0);
     }
 }
 
 @media only screen and (min-width: 1560px) and (max-width: 1720px){
     :root{
-        --background-color: rgb(230, 37, 213);
+        --primary-background-color: rgb(230, 37, 213);
+        --secondary-background-color: rgb(230, 37, 213, 0.3);
         --text-color: rgb(250, 250, 250);
     }
 }
 
 @media only screen and (min-width: 1720px){
     :root{
-        --background-color: rgb(14, 230, 238);
+        --primary-background-color: rgb(14, 230, 238);
+        --secondary-background-color: rgb(14, 230, 238, 0.3);
         --text-color: rgb(0, 0, 0);
     }
 }
 
+body{
+    background-color: var(--secondary-background-color, rgba(211, 211, 211, 0.3))
+}
+
 nav{
-    background-color: var(--background-color);
+    background-color: var(--primary-background-color, gray);
     height: 60px;
     width: 100%;
     padding: 5px;
 }
+
 ul{
     height: 100%;
     width: 35%;
@@ -45,6 +54,7 @@ ul{
     flex-direction: row;
     float: right;
 }
+
 li{
     margin: auto;
     padding: 10px;
