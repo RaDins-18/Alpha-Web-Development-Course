@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        .box:first-child{
+            background-color: rgb(241, 117, 117);
+        }
+        .box::first-letter{
+            font-size: 30px;
+            color: black;
+        }
+        .box:first-line{
+            color: rgb(0, 60, 255);
+        }
+        .boxes *{
+            border: 2px solid black;
+            padding: 5px;
+            margin: 5px;
+        }
+        [data-color="primary"]{
+            color: rgb(255, 0, 170);
+        }
+        a, p, .box{
+            padding: 15px;
+        }
+        .box:nth-child(even){
+            background-color: lightgray;
+        }
+        .box:nth-last-child(1){
+            background-color: rgba(153, 205, 50, 0.616);
+        }
+        .boxes::before{
+            content: "Hey I am Larry";
+            color: #ffffff;
+        }
+        .boxes::after{
+            content: "Hey I am Candy";
+            color: #ffffff;
+        }
+        .box::selection{
+            background-color: black;
+            color: aqua;
+        }
+        input::placeholder{
+            color: aqua;
+            background-color: black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">
+            Hey I am first box, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem nostrum dignissimos perferendis dolor aliquam dolorem laudantium numquam rerum esse consequuntur? Saepe voluptatibus sint vero aliquid ducimus officiis praesentium, assumenda incidunt impedit nisi?
+        </div>
+        <div class="box" data-color="primary">
+            Hey I am a box, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem nostrum dignissimos perferendis dolor aliquam dolorem laudantium numquam rerum esse consequuntur? Saepe voluptatibus sint vero aliquid ducimus officiis praesentium, assumenda incidunt impedit nisi?
+        </div>
+        <div class="box">
+            Hey I am a box.
+        </div>
+    </div>
+    <br>
+    <input type="text" placeholder="Type your name:">
+    
+</body>
+</html>
