@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            background-color: lightgreen;
+            width: 50rem;
+            height: 50rem;
+        }
+        .box{
+            background-color: lightcoral;
+            width: 10em;
+            height: 10em;
+
+            /* transition-property is used to define property or properties on which transition work. */
+            /* transition-property: transform, background-color; */
+            /* transition-property: transform; */
+            /* transition-property: all; */
+
+            /* transition-duration is used to define duration (timing) of transition. */
+            /* transition-duration: 2s; */
+            
+            /* transition-timing-function is used to define the way of flow of transition. */
+            /* transition-timing-function: ease-in-out; */
+            
+            /* transition-delay is used to delay the transition. */
+            /* transition-delay: 1s; */
+
+            /* We can also use all 4 properties in a single line. */
+            transition: all 2s cubic-bezier(0.03, 0.18, 0, 0.99) 1s;
+
+            /* We can learn these properties from official documentation (MDN Reference) by hover to transtion property. */
+        }
+        .box:hover{
+            transform: translateX(20em) translateY(20em) scale(2);
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
