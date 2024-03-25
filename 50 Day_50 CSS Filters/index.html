@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+        /* The filter CSS property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders. */
+
+        /* Some important filter properties are following: */
+
+        /* filter: invert(70%); */
+
+        /* filter: blur(5px); */
+
+        /* filter: brightness(130%); */
+
+        /* filter: contrast(150%); */
+
+        /* filter: grayscale(80%); */
+
+        /* filter: sepia(80%); */
+
+        /* filter: hue-rotate(90deg); */
+
+        /* filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5)); */
+
+        /* filter: opacity(0.5); */
+
+
+        /* Its not working */
+        /* filter: blur(100%) invert(100%) opacity(10%); */
+
+        /* You can also check the MDN reference. */
+    }
+</style>
+<body>
+    <div class="container">
+        <img src="bg.jpg" alt="Try again.">
+    </div>
+</body>
+</html>
