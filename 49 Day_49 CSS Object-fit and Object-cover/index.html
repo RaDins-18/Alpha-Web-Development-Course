@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object-fit and Object-cover</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            height: 535px;
+            width: 535px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            /* We can set an image in the background. */
+            background-image: url(https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg);
+
+            /* Through background-position we can set position of background to center and also left, top, right, bottom. */
+            background-position: center center;
+
+            /* If the background image size is small and it repeats so, we use background-repeat: no-repeat;. */
+            background-repeat: no-repeat;
+
+            /* You can also check background-clip property by hovering on it through MDN Reference. */
+            /* background-clip: ; */
+        }
+        img{
+            border: 2px solid black;
+            width: 500px;
+            height: 500px;
+
+            /* Object fit property in CSS is very important property. */
+
+            /* Through object-fit: fill; property we can fill any ratio with destroying its original aspect ratio, It is default property. */
+            object-fit: fill;
+            
+            /* Through object-fit: contain; property we can fit any image in any size without hiding its original aspect ratio. */
+            object-fit: contain;
+            
+            /* The object-fit: scale-down; property is almost same as object-fit: contain; property. */
+            object-fit: scale-down;
+            
+            /* Through object-fit: cover; property we can fit any image in any ratio with hiding its original aspect ratio. */
+            object-fit: cover;
+
+            /* Through object-position property we can save the position of aspect ratio that we don't want to hide. */
+            /* object-position: top right; */
+            /* object-position: -10px 10px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="WOW">
+    </div>
+</body>
+</html>
