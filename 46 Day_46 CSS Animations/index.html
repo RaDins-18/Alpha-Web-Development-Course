@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            background-color: rgb(0, 100, 100);
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+        }
+        .box{
+            background-color: rgb(0, 180, 180);
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* animation-name is used to define the name of animation. */
+            animation-name: RaDinKiAnimation;
+
+            /* animation-duration is used to define the run-time of animation. */
+            animation-duration: 2s;
+
+            /* animation-timing-function is used to define the way of flow of animation. */
+            animation-timing-function: cubic-bezier(0.34, 0.01, 0, 0.98);
+
+            /* animation-delay is used to define time before starting the animation. */
+            animation-delay: 1s;
+
+            /* animation-iteration-count is used to define how many time animation will execute. */
+            animation-iteration-count: infinite;
+
+            /* animation-direction is used to define the direction of animation where to start and end. */
+            animation-direction: alternate-reverse;
+            
+            /* animation-fill-mode is used to define where the animation ends after excuting. */
+            animation-fill-mode: forwards;
+            
+            /* Through animation-play-state we can stop animation. */
+            /* animation-play-state: paused; */
+
+            /* Shorthand */
+            animation: RaDinKiAnimation 2s cubic-bezier(0.34, 0.01, 0, 0.98) 1s infinite alternate-reverse forwards;
+            
+            /* Mulyiple Animations */
+            animation: RaDinKiAnimation 5s ease-in-out 1s infinite,
+                       AbuzarKiAnimation 5s ease-in-out 1s infinite;
+        }
+
+        /* Through @keyframes we can create custom animations. */
+
+        @keyframes RotateAnimation{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes RaDinKiAnimation{
+            /* At beginning of animation. */
+            0%{
+                transform: translateX(0vw);
+            }
+            /* At middle of animation. */
+            50%{
+                background-color: rgb(255, 166, 0);
+            }
+            /* At last of animation. */
+            100%{
+                transform: translateX(94.8vw);
+            }
+        }
+
+        @keyframes AbuzarKiAnimation{
+            0%{
+                height: 100px;
+                width: 100px;
+            }
+            20%{
+                height: 110px;
+                width: 110px;
+            }
+            40%{
+                height: 120px;
+                width: 120px;
+            }
+            60%{
+                height: 120px;
+                width: 120px;
+            }
+            80%{
+                height: 110px;
+                width: 110px;
+            }
+            100%{
+                height: 100px;
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>
