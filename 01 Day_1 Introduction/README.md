@@ -1,5 +1,3 @@
 # Introduction
 
-![plot](index.html - 01 Day_1 Introduction - Visual Studio Code.png)
-
-![alt text](index.html - 01 Day_1 Introduction - Visual Studio Code.png)
+![Alt text](index.html%20-%2001%20Day_1%20Introduction%20-%20Visual%20Studio%20Code.png)
