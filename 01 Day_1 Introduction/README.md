@@ -1,3 +1,3 @@
 # Introduction
 
-![alt text](index.html - 01 Day_1 Introduction - Visual Studio Code.png)
+![plot](./directory_1/directory_2/.../directory_n/plot.png)
