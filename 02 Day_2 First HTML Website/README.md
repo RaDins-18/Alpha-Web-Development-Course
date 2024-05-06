@@ -1,3 +1,3 @@
-# Alpha Web Development Course
+# First HTML Website
 
 ![Alt text](README.png)
