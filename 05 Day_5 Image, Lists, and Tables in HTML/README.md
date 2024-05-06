@@ -1,7 +1,3 @@
-# My Bookmarks Website
+# Image, Lists, and Tables in HTML
 
 ![Alt text](README.png)
-
-# Bookmark Manager - RaDin
-
-![Alt text](README-1.png)
