@@ -1,6 +1,6 @@
 # Exercise 7 - Website Using Grid
 
-![Alt text](README.png)
+![Alt text](README/README.png)
 
 # Output
 
