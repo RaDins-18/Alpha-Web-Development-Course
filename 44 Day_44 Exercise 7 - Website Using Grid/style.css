@@ -36,7 +36,7 @@
     grid-template-areas: "logo menu menu";
     background-color: var(--primary-color);
     position: fixed;
-    height: 5rem;
+    height: 8vh;
     width: 100vw;
     top: 0;
     z-index: 1;
@@ -84,8 +84,8 @@
     grid-area: main;
     background: url(imgs/home-bg.png);
     background-repeat: no-repeat;
-    background-size: 100vw;
-    height: calc(100vh - 5rem);
+    background-size: 105%;
+    height: calc(100vh - 8vh);
     color: var(--secondary-color);
     display: grid;
     align-content: center;
