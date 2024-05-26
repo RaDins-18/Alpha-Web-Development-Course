@@ -12,6 +12,10 @@
     --primary-font:  "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
 }
 
+html{
+    scroll-snap-type: y mandatory;
+}
+
 /*                                           Home                                           */
 
 #home{
@@ -188,6 +192,12 @@ nav button{
     width: 100%;
     position: relative;
     z-index: 2;
+}
+
+/*                                          Common                                          */
+
+.common{
+    scroll-snap-align: start;
 }
 
 /*                                     First Container                                      */
