@@ -1,4 +1,4 @@
-# CSS Animations
+# Exercise 8 - Bounce Animation
 
 ![Alt text](README_IMGS/README.png)
 
