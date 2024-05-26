@@ -1,7 +1,7 @@
 # Exercise 1 - Pure HTML Media Player
 
-![Alt text](README.png)
+![Alt text](README_IMGS/README.png)
 
 # OUTPUT
 
-![Alt text](OUTPUT.png)
+![Alt text](README_IMGS/OUTPUT.png)
