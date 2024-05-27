@@ -1,4 +1,4 @@
-# Exercise 11 - Calculate the Factorial
+# Exercise 12 - Color the Boxes
 
 ![Alt text](README_IMGS/README.png)
 
