@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling, setInterval & setTimeout in JavaScript</title>
+    <style>
+        .child{
+            background-color: palevioletred;
+            border: 2px solid black;
+            padding: 30px;
+            margin: 30px;
+            cursor: pointer;
+        }
+        .childContainer{
+            background-color: rgb(30, 160, 250);
+            border: 2px solid black;
+            padding: 30px;
+            margin: 30px;
+        }
+        .container{
+            background-color: yellow;
+            border: 2px solid black;
+            padding: 30px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="childContainer">
+            <div class="child">
+                I am a Child
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Event Bubbling:
+
+        // Event Bubbling is defined as we clicked or listen the event of a child element then the parent element also listen the event.
+
+        //                                         "click" is the event
+        //                                                   ↓
+        document.querySelector(".child").addEventListener("click", (e) => {
+            //                                                      ↑
+            //                                         (e) is the handler / object
+
+            e.stopPropagation()
+            // We can stop event bubbling by .stopPropagation() method.
+
+            alert("Child was clicked");
+        })
+
+        document.querySelector(".childContainer").addEventListener("click", () => {
+            alert("Child Container was clicked");
+        })
+
+        document.querySelector(".container").addEventListener("click", () => {
+            alert("Container was clicked");
+        })
+
+
+        // setInterval & setTimeout:
+
+        let r_n = () => {
+            // num variable generate numbers between 0 to 255
+            let num = Math.floor(Math.random() * 256);
+            // return num variable.
+            return num;
+        }
+
+        // setInterval function is used to run a function or functions continuously after a certain time.
+        let sI = setInterval(() => {
+            document.querySelector(".childContainer").style.background = `rgb(${r_n()}, ${r_n()}, ${r_n()})`;
+        }, 1000);
+
+        console.log(sI) // It returns a number.
+        // clearInterval(1) // Through that returned number we can clear interval.
+
+        // setTimeout function is used to run a function or functions after a certain time but only one time.
+        let sT = setTimeout(() => {
+            document.querySelector(".childContainer").style.background = `rgb(${r_n()}, ${r_n()}, ${r_n()})`;
+        }, 1000);
+
+        console.log(sT) // It returns a number.
+        clearTimeout(2) // Through that returned number we can clear timeout.
+
+    </script>
+</body>
+</html>
