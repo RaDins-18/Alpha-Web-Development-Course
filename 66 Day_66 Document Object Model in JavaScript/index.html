@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    
+
+    <script>
+        // DOM:
+        // It stands for Document Object Model.
+        // DOM provides the map of entire document in an object.
+        // More About DOM: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+        // Reference image of DOM: DOM.png
+        // Through DOM we can change document like below.
+        document.title = "DOM in JavaScript";
+        console.log(document.title);
+        console.log(document.body);
+        console.log(document.body.innerHTML);
+        document.body.style.backgroundColor = "aqua";
+        
+        // BOM:
+        // It stands for Browser Object Model.
+        // BOM provides access to various properties, methods, and events, allowing developers to control browser behavior, handle windows, manage cookies, manipulate URLs, and more.
+        // The BOM represents the browser-specific objects and interfaces that enable JavaScript to interact with the browser window and its elements.
+        // More About BOM: https://www.w3schools.com/js/js_window.asp
+    </script>
+</body>
+</html>
