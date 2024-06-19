@@ -1,0 +1,21 @@
+{
+  "name": "spotify-clone",
+  "version": "1.0.0",
+  "description": "This is a spotify clone developed by RaDin.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "spotify",
+    "music",
+    "player"
+  ],
+  "author": "RaDin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "slugify": "^1.6.6"
+  }
+}
