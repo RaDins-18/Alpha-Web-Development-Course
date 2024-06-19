@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Token Manager</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(20, 45, 100);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .btn-box{
+            display: flex;
+            gap: 100px;
+        }
+        button{
+            border: 2px solid white;
+            background-color: transparent;
+            border-radius: 20px;
+            height: 65px;
+            width: 150px;
+            font-size: 25px;
+            color: white;
+            cursor: pointer;
+        }
+        .info-box{
+            background-color: rgb(30, 70, 150);
+            display: flex;
+        }
+        h1{
+            font-size: 25px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-box">
+        <button class="sign-in">Sign in</button>
+        <button class="get-details">Get Details</button>
+    </div>
+    <div class="info-box">
+        <h1 class="heading-1"></h1>
+        <h1 class="heading-2"></h1>
+        <h1 class="heading-3"></h1>
+    </div>
+    
+    <script>
+        // 12. The Token Manager:
+        // You are developing a user authentication system, and you need to manage user authentication tokens. Implement a function named setAuthToken that takes an authentication token and sets it in localStorage with an expiration time.
+        
+        function setAuthToken(name, token) {
+            const date = new Date();
+
+            let day = date.getDate();
+            let month = date.getMonth() + 1;
+            let year = date.getFullYear() + 1;
+            
+            let userInfo = {
+                Username: name,
+                Authentication_Token: token,
+                Expire_Date: `${day}-${month}-${year}`
+            };
+            
+            localStorage.setItem("user-info", JSON.stringify(userInfo));
+        }
+        
+        document.querySelector(".sign-in").addEventListener("click", () => {
+            let name = prompt("Enter your name");
+            let token = prompt("Enter your token");
+            setAuthToken(name, token);
+        });
+
+        function getDetails() {
+            let details = localStorage.getItem('user-info');
+            return JSON.parse(details);
+        }
+
+        document.querySelector(".get-details").addEventListener("click", () => {
+            let details = getDetails()
+            let i = 1;
+            for (const detail in details) {
+                if (Object.hasOwnProperty.call(details, detail)) {
+                    const element = details[detail];
+                    document.body.querySelector(`.heading-${i}`).innerText = `${detail}: ${element}`;
+                    i++
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

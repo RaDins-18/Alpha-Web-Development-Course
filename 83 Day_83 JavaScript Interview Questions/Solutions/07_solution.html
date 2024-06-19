@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_solution</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(35, 15, 15);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        button{
+            height: 60px;
+            width: 200px;
+            color: white;
+            background-color: transparent;
+            border: 2px solid white;
+            margin: 30px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        .container{
+            border: 2px solid white;
+            border-radius: 20px;
+            width: 60vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1{
+            margin: 10px;
+            width: 46.5vw;
+            background-color: rgb(50, 25, 25);
+        }
+    </style>
+</head>
+<body>
+    <button>Add Note</button>
+    <div class="container">
+        <div class="note"></div>
+    </div>
+
+    <script>
+        // 7. The Local Storage Manager:
+        // You are working on a note-taking app, and you want to implement a function named saveNoteToLocalStorage that takes a note object and saves it to the browser's local storage.
+        function saveNoteToLocalStorage(title, des) {
+            localStorage.setItem(title, des);
+        }
+
+        let data = localStorage;
+        
+        document.querySelector("button").addEventListener("click", () => {
+            let title = prompt("Enter title");
+            let des = prompt("Enter description");
+            saveNoteToLocalStorage(title, des);
+
+            for (const key in data) {
+                if (Object.hasOwnProperty.call(data, key)) {
+                    const value = data[key];
+                    document.querySelector(".note").insertAdjacentHTML("afterbegin", `<h1>${key}: ${value}</h1>`);
+                }
+            }
+        })
+
+        for (const key in data) {
+            if (Object.hasOwnProperty.call(data, key)) {
+                const value = data[key];
+                document.querySelector(".note").insertAdjacentHTML("afterbegin", `<h1>${key}: ${value}</h1>`);
+            }
+        }
+    </script>
+</body>
+</html>
