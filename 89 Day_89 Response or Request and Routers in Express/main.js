@@ -34,7 +34,7 @@ app.delete('/', (req, res) => {
 })
 
 
-// // We use chainging of requests if the end point is same.
+// // We use chaining of requests if the end point is same.
 // app.get('/', (req, res) => {
 //   console.log("Hey its a get request.");
 //   res.send('Hello World Get!')
