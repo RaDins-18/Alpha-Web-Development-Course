@@ -1,6 +1,6 @@
 # Exercise 16 - Dummy Data Generator
 
-# QUESTIOM
+# QUESTION
 ![Alt text](README_IMGS/QUESTION.png)
 
 # Main Server
