@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    width: 100vw;
+}
+
+.container{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn{
+    border: none;
+    height: 5rem;
+    width: 15rem;
+    background-color: rgb(230, 100, 10);
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+}
