@@ -1,7 +1,4 @@
-# Exercise 16 - Dummy Data Generator
-
-# QUESTIOM
-![Alt text](README_IMGS/QUESTION.png)
+# Installing Mongoose - Using it with Express
 
 # Main Server
 ![Alt text](README_IMGS/README.png)
