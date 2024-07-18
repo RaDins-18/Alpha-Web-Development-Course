@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+<body class="bg-gray-900">
+    <div class="h-full w-full flex justify-center items-center flex-wrap">
+        <% for (let i = 0; i < arr.length; i++) { %>
+            <%- include('card', arr[i]) %>
+        <% } %>
+    </div>
+</body>
+</html>
