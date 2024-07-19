@@ -4,10 +4,10 @@
 
 // For example, these files become:
 
-// 1. abuzar.pdf
-// 2. abuzar.zip
-// 3. cat.jpg
-// 4. cat.pdf
+// 1. cat.jpg
+// 2. cat.pdf
+// 3. max.pdf
+// 4. max.zip
 // 5. name.jpg
 // 6. name.png
 // 7. radin.png
